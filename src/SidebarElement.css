@@ -4,11 +4,16 @@
     cursor: pointer;
 }
 
+
 .sidebarOptions:hover{
     background-color: lightcyan ;
     color: var(--twitter-color);
     border-radius: 40px;
+    transition: color 100ms ease-out;
+
 }
+
+
 
 .sidebarOptions >   .MuiSvgIcon-root{
     padding: 15px;
