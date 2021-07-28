@@ -1,0 +1,4 @@
+.widgets{
+    flex: 0.3;
+    border-right: 2px solid var(--twitter-bg);
+}
