@@ -2,8 +2,18 @@ import React from 'react';
 import './Feed.css';
 import {TweetBox} from './TweetBox';
 import {Post} from './Post';
+import { render } from '@testing-library/react';
 
-export function Feed() {
+export function Feed(props) {
+    const userData = [];
+    props.data.forEach((user) => {
+        userData.push(
+            <Post displayName={user.displayName}
+            username={user.username} 
+            text={user.text}
+            avatar={user.avatar} />
+        )
+    })
     return (
         <div className="feed">
             {/*Home*/}
@@ -12,20 +22,13 @@ export function Feed() {
             <TweetBox />
 
             {/*posts*/}
-            <Post />
-            <Post />
-            <Post />
-            <Post />
-            <Post />
-            <Post />
-            <Post />
-            <Post />
-
-
-
+            {userData}
 
         </div>
     )
+    
 }
+
+
 
 
